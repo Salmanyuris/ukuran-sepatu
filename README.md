@@ -3,119 +3,166 @@
 
 Aplikasi web sederhana untuk menghitung perkiraan ukuran sepatu berdasarkan tinggi badan.
 
-Project ini dibuat menggunakan HTML, CSS, dan JavaScript murni (Vanilla JavaScript) tanpa menggunakan framework atau library tambahan.
+Project ini dibuat menggunakan HTML, CSS, dan JavaScript (Vanilla JavaScript) tanpa menggunakan framework atau library tambahan.
 
-Pengguna cukup memasukkan tinggi badan dalam bentuk angka, kemudian aplikasi akan menghitung dan menampilkan perkiraan ukuran sepatu secara otomatis.
+📌 Tentang Project
+
+Hitung Ukuran Sepatu adalah aplikasi sederhana yang memungkinkan pengguna memasukkan tinggi badan, kemudian aplikasi akan menghitung perkiraan ukuran sepatu berdasarkan rumus yang telah ditentukan.
+
+Aplikasi ini dibuat sebagai project pembelajaran untuk memahami dasar-dasar:
+
+HTML untuk membuat struktur halaman.
+CSS untuk membuat tampilan antarmuka.
+JavaScript untuk menangani input dan proses perhitungan.
+DOM Manipulation untuk mengambil data dari input dan menampilkan hasil.
+
+Catatan: Hasil yang diberikan oleh aplikasi merupakan perkiraan berdasarkan rumus yang digunakan dan tidak dapat dijadikan sebagai ukuran sepatu yang pasti.
 
 ✨ Fitur
-Input tinggi badan pengguna.
-Validasi dasar melalui konversi nilai menggunakan Number().
-Menghitung perkiraan ukuran sepatu berdasarkan tinggi badan.
-Membulatkan hasil perhitungan menggunakan Math.round().
+Input tinggi badan.
+Menghitung perkiraan ukuran sepatu secara otomatis.
+Membulatkan hasil perhitungan ke bilangan terdekat.
 Menampilkan hasil langsung pada halaman.
-Tampilan sederhana dengan tema warna gelap.
-Responsive terhadap ukuran layar karena menggunakan layout Flexbox.
-Tidak membutuhkan database atau backend.
-🛠️ Teknologi yang Digunakan
+Tampilan sederhana dan minimalis.
+Menggunakan desain dengan tema gelap.
+Responsive menggunakan CSS Flexbox.
+Tidak membutuhkan database maupun backend.
+🛠️ Teknologi
 
-Project ini menggunakan beberapa teknologi dasar web:
+Project ini dibuat menggunakan:
 
-HTML5 — untuk membuat struktur halaman.
-CSS3 — untuk mengatur tampilan dan layout.
-JavaScript — untuk menangani input dan proses perhitungan.
-Flexbox — untuk memposisikan aplikasi di tengah halaman.
-Linear Gradient — untuk membuat background.
-DOM Manipulation — untuk mengambil input dan menampilkan hasil.
+Teknologi	Kegunaan
+HTML5	Membuat struktur halaman
+CSS3	Mengatur tampilan dan layout
+JavaScript	Menjalankan logika dan perhitungan
+DOM	Mengambil input dan menampilkan hasil
+Flexbox	Mengatur posisi elemen
+Linear Gradient	Membuat background
 📁 Struktur Project
-
-Struktur file project sangat sederhana:
-
 Hitung-Ukuran-Sepatu/
+│
 ├── index.html
 ├── script.js
 ├── style.css
 └── README.md
 
+Penjelasan File
 index.html
 
-File index.html merupakan halaman utama aplikasi.
+Berisi struktur utama halaman aplikasi, seperti:
 
-File ini bertanggung jawab untuk membuat:
+Input tinggi badan.
+Tombol untuk melakukan perhitungan.
+Area untuk menampilkan hasil.
+Link ke file CSS.
+Link ke file JavaScript.
+script.js
 
-Judul halaman.
-Label input tinggi badan.
-Input untuk memasukkan tinggi badan.
-Tombol untuk menjalankan perhitungan.
-Area untuk menampilkan hasil ukuran sepatu.
-Import file style.css.
-Import file script.js.
+Berisi logika utama aplikasi, termasuk:
 
-Bagian utama aplikasi menggunakan elemen berikut:
-
-<input
-    type="text"
-    id="inputNumber"
-    placeholder="Masukkan tinggi badan"
-/>
-
-<button onclick="result()">
-    Hitung Ukuran Sepatu
-</button>
-
-<div>
-    Ukuran Sepatu : <span id="result">-</span>
-</div>
-
-
-Ketika tombol "Hitung Ukuran Sepatu" ditekan, fungsi result() pada script.js akan dijalankan.
-
-🧮 Cara Kerja Perhitungan
-
-Perhitungan dilakukan di dalam fungsi result() pada file script.js.
-
-Alur prosesnya adalah:
-
-Mengambil nilai dari input tinggi badan.
-Mengubah nilai input menjadi angka menggunakan Number().
-Menghitung nilai perkiraan ukuran sepatu.
-Membulatkan hasil menggunakan Math.round().
+Mengambil nilai dari input.
+Mengubah nilai input menjadi angka.
+Melakukan perhitungan ukuran sepatu.
+Membulatkan hasil.
 Menampilkan hasil ke halaman.
+style.css
 
-Bagian utama proses perhitungannya adalah:
+Berisi seluruh styling aplikasi, seperti:
 
-let x = Number(input);
-let y = x * 0.24 + 0.42;
-output.innerHTML = Math.round(y);
+Background.
+Layout.
+Warna.
+Padding dan margin.
+Border radius.
+Button.
+Input.
+Typography.
+Box shadow.
+README.md
 
+Berisi dokumentasi mengenai project, cara penggunaan, struktur project, serta informasi lainnya.
 
-Secara matematis, program menggunakan rumus:
+🧮 Rumus Perhitungan
+
+Aplikasi menggunakan rumus berikut:
 
 Ukuran Sepatu = (Tinggi Badan × 0.24) + 0.42
 
 
-Kemudian hasil akhirnya dibulatkan ke bilangan terdekat.
+Hasil perhitungan kemudian dibulatkan menggunakan fungsi JavaScript:
 
-Sebagai contoh, jika tinggi badan yang dimasukkan adalah 170, maka program akan menghitung:
+Math.round()
+
+Contoh Perhitungan
+
+Misalnya tinggi badan yang dimasukkan adalah:
+
+170 cm
+
+
+Maka:
 
 170 × 0.24 + 0.42
+= 40.8 + 0.42
 = 41.22
 
 
-Setelah dibulatkan menggunakan Math.round():
+Setelah dibulatkan:
 
 41
 
 
-Sehingga aplikasi akan menampilkan:
+Maka aplikasi akan menampilkan:
 
 Ukuran Sepatu : 41
 
+🔄 Alur Program
 
-Catatan: Rumus tersebut merupakan rumus yang digunakan oleh aplikasi ini untuk menghasilkan perkiraan ukuran sepatu. Hasilnya tidak dapat dianggap sebagai ukuran sepatu yang pasti karena ukuran sepatu aktual dapat berbeda berdasarkan standar ukuran, merek, dan bentuk kaki.
+Secara sederhana, alur kerja aplikasi adalah sebagai berikut:
 
-⚙️ Penjelasan script.js
+User memasukkan tinggi badan
+            ↓
+     Klik tombol "Hitung"
+            ↓
+     Ambil nilai input
+            ↓
+    Konversi menjadi Number
+            ↓
+      Jalankan perhitungan
+            ↓
+       Bulatkan hasil
+            ↓
+      Tampilkan hasil
 
-Fungsi utama aplikasi berada pada file script.js:
+💻 Contoh Penggunaan
+
+Pengguna memasukkan:
+
+170
+
+
+Kemudian menekan tombol:
+
+Hitung Ukuran Sepatu
+
+
+Aplikasi akan menghasilkan:
+
+Ukuran Sepatu : 41
+
+Contoh Hasil
+Tinggi Badan	Perkiraan Ukuran
+150 cm	36
+160 cm	39
+170 cm	41
+180 cm	44
+190 cm	46
+
+Nilai pada tabel merupakan hasil dari rumus yang digunakan dalam aplikasi dan bukan standar ukuran sepatu resmi.
+
+⚙️ Cara Kerja JavaScript
+
+Fungsi utama aplikasi berada pada script.js:
 
 function result() {
     let input = document.getElementById("inputNumber").value;
@@ -127,133 +174,68 @@ function result() {
     console.info(input);
 }
 
-Mengambil nilai input
+1. Mengambil Input
 let input = document.getElementById("inputNumber").value;
 
 
-Kode tersebut mengambil nilai yang dimasukkan pengguna pada elemen dengan ID inputNumber.
+Kode tersebut mengambil nilai yang dimasukkan pengguna pada input dengan ID inputNumber.
 
-Mengambil elemen output
+2. Mengambil Element Output
 let output = document.getElementById("result");
 
 
-Kode tersebut mengambil elemen <span> yang digunakan untuk menampilkan hasil.
+Kode tersebut mengambil elemen yang digunakan untuk menampilkan hasil perhitungan.
 
-Mengubah input menjadi angka
+3. Mengubah Input Menjadi Angka
 let x = Number(input);
 
 
-Karena nilai dari input HTML pada dasarnya berupa string, Number() digunakan untuk mengubahnya menjadi tipe data angka.
+Nilai dari input HTML biasanya berupa string. Fungsi Number() digunakan untuk mengubahnya menjadi tipe data angka.
 
-Melakukan perhitungan
+4. Melakukan Perhitungan
 let y = x * 0.24 + 0.42;
 
 
-Baris tersebut menjalankan rumus perhitungan ukuran sepatu.
+Baris tersebut menjalankan rumus untuk mendapatkan perkiraan ukuran sepatu.
 
-Membulatkan hasil
+5. Membulatkan Hasil
 Math.round(y);
 
 
 Math.round() digunakan untuk membulatkan hasil ke bilangan bulat terdekat.
 
-Menampilkan hasil
+6. Menampilkan Hasil
 output.innerHTML = Math.round(y);
 
 
-Hasil perhitungan kemudian dimasukkan ke dalam elemen dengan ID result.
+Hasil akhir kemudian ditampilkan pada halaman melalui elemen dengan ID result.
 
-Menampilkan input di Console
-console.info(input);
+🎨 Tampilan
 
+Aplikasi menggunakan desain sederhana dengan:
 
-Kode tersebut digunakan untuk menampilkan nilai input pada Developer Console browser. Bagian ini berguna ketika melakukan debugging atau pengecekan nilai yang dimasukkan pengguna.
+Background gradient hitam dan biru gelap.
+Card utama berwarna biru gelap.
+Teks berwarna putih.
+Input dengan sudut membulat.
+Button berwarna biru.
+Shadow pada card.
+Layout menggunakan Flexbox.
 
-🎨 Penjelasan style.css
+Tujuannya adalah membuat aplikasi tetap sederhana tetapi nyaman digunakan.
 
-File style.css digunakan untuk memberikan tampilan visual pada aplikasi.
+🚀 Cara Menjalankan
 
-Layout halaman
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-
-Flexbox digunakan untuk menempatkan container aplikasi di tengah halaman secara horizontal dan vertikal.
-
-height: 100vh membuat tinggi halaman mengikuti tinggi viewport browser.
-
-Background
-
-Aplikasi menggunakan gradient:
-
-background: linear-gradient(to bottom, #000, #001f3f);
-
-
-Warna background dibuat dari hitam menuju biru gelap.
-
-Container aplikasi
-
-Container utama menggunakan ID:
-
-#UkSepatu
-
-
-Container diberikan:
-
-Background biru gelap.
-Padding.
-Border radius.
-Box shadow.
-Warna teks putih.
-Text alignment di tengah.
-
-Hal ini membuat tampilan aplikasi terlihat seperti sebuah card sederhana.
-
-Input
-
-Input diberikan padding dan border radius agar lebih nyaman digunakan:
-
-input {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-Tombol
-
-Tombol diberikan warna biru dan bentuk rounded:
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #0074cc;
-    color: white;
-    font-size: 16px;
-}
-
-
-Properti cursor: pointer membuat cursor berubah ketika pengguna mengarahkan mouse ke tombol.
-
-🚀 Cara Menjalankan Project
-
-Project ini tidak membutuhkan proses instalasi khusus karena hanya menggunakan HTML, CSS, dan JavaScript.
+Project ini tidak membutuhkan instalasi dependency karena hanya menggunakan HTML, CSS, dan JavaScript.
 
 1. Clone Repository
 
-Jika project berada di GitHub, clone repository menggunakan:
+Jika project tersedia di GitHub:
 
 git clone <URL_REPOSITORY>
 
 
-Kemudian masuk ke folder project:
+Masuk ke folder project:
 
 cd Hitung-Ukuran-Sepatu
 
@@ -264,13 +246,13 @@ Cara paling sederhana adalah membuka file:
 index.html
 
 
-langsung menggunakan browser.
+menggunakan browser.
 
-Anda juga dapat menggunakan extension seperti Live Server pada Visual Studio Code untuk mendapatkan pengalaman development yang lebih nyaman.
+Alternatifnya, jika menggunakan Visual Studio Code, project dapat dijalankan menggunakan extension Live Server.
 
-3. Masukkan Tinggi Badan
+3. Gunakan Aplikasi
 
-Pada halaman aplikasi, masukkan tinggi badan, misalnya:
+Masukkan tinggi badan, contohnya:
 
 170
 
@@ -280,68 +262,77 @@ Kemudian klik:
 Hitung Ukuran Sepatu
 
 
-Aplikasi akan menampilkan hasil perkiraan ukuran sepatu.
+Hasil perkiraan ukuran sepatu akan ditampilkan pada halaman.
 
-🖥️ Contoh Penggunaan
+⚠️ Keterbatasan
 
-Input:
+Aplikasi ini masih menggunakan perhitungan sederhana sehingga memiliki beberapa keterbatasan.
 
-Masukkan tinggi badan: 170
-
-
-Proses:
-
-170 × 0.24 + 0.42
-= 41.22
-
-
-Hasil setelah pembulatan:
-
-Ukuran Sepatu : 41
-
-
-Contoh lainnya:
-
-Tinggi Badan	Hasil Perhitungan	Ukuran
-150	36.42	36
-160	38.82	39
-170	41.22	41
-180	43.62	44
-190	46.02	46
-⚠️ Catatan dan Keterbatasan
-
-Aplikasi ini merupakan project sederhana untuk melakukan perhitungan berdasarkan rumus yang telah ditentukan.
-
-Beberapa kondisi belum ditangani secara khusus, misalnya:
+Saat ini aplikasi belum memiliki validasi khusus untuk:
 
 Input kosong.
 Input berupa huruf.
-Input berupa angka negatif.
-Tinggi badan yang tidak masuk akal.
-Perbedaan standar ukuran sepatu antarnegara.
-Perbedaan ukuran sepatu antarprodusen.
-Perbedaan bentuk dan panjang kaki setiap orang.
+Angka negatif.
+Tinggi badan yang tidak valid.
+Perbedaan standar ukuran sepatu.
+Perbedaan ukuran antar merek.
+Panjang kaki pengguna.
 
-Karena itu, hasil yang diberikan sebaiknya dianggap sebagai perkiraan, bukan sebagai pengukuran ukuran sepatu yang sebenarnya.
+Oleh karena itu, hasil aplikasi hanya digunakan sebagai perkiraan.
 
-🔮 Pengembangan Selanjutnya
+🔮 Rencana Pengembangan
 
-Project ini masih dapat dikembangkan dengan berbagai fitur tambahan, misalnya:
+Beberapa fitur yang dapat ditambahkan pada versi berikutnya:
 
-Menambahkan validasi input agar hanya menerima angka.
-Memberikan pesan error ketika input kosong.
-Menolak tinggi badan negatif atau tidak masuk akal.
-Menggunakan <input type="number">.
-Menambahkan pilihan satuan centimeter atau meter.
-Menambahkan pilihan standar ukuran sepatu seperti EU, US, dan UK.
-Menambahkan konversi panjang kaki ke ukuran sepatu.
-Menambahkan animasi ketika hasil ditampilkan.
-Membuat desain yang lebih responsive untuk perangkat mobile.
-Menambahkan dark/light mode.
-Menggunakan JavaScript yang lebih modern dengan addEventListener().
-Menambahkan unit testing untuk fungsi perhitungan.
+ Validasi input tinggi badan.
+ Menolak input kosong.
+ Menolak angka negatif.
+ Menggunakan <input type="number">.
+ Menambahkan satuan tinggi badan.
+ Menambahkan pilihan ukuran EU, US, dan UK.
+ Menambahkan konversi berdasarkan panjang kaki.
+ Menambahkan animasi hasil.
+ Meningkatkan responsive design.
+ Menambahkan dark/light mode.
+ Menggunakan addEventListener() daripada inline onclick.
+ Menambahkan testing untuk fungsi perhitungan.
+📚 Tujuan Pembelajaran
+
+Project ini dapat digunakan untuk mempelajari konsep dasar web development, khususnya:
+
+HTML
+Struktur dokumen HTML.
+Form input.
+Button.
+Label.
+ID dan element HTML.
+External stylesheet dan JavaScript.
+CSS
+Flexbox.
+Positioning.
+Margin dan padding.
+Border radius.
+Box shadow.
+Gradient.
+Styling input dan button.
+JavaScript
+Function.
+Variable.
+Number().
+Math.round().
+document.getElementById().
+.value.
+.innerHTML.
+Event melalui onclick.
+Console debugging menggunakan console.info().
 📄 Lisensi
 
 Project ini dibuat untuk tujuan pembelajaran dan latihan dasar HTML, CSS, dan JavaScript.
 
-Silakan gunakan, modifikasi, dan kembangkan project ini sesuai kebutuhan.
+Silakan digunakan, dimodifikasi, dan dikembangkan sesuai kebutuhan.
+
+👨‍💻 Author
+
+Dibuat sebagai project pembelajaran Vanilla JavaScript.
+
+⭐ Jika project ini bermanfaat, jangan lupa untuk memberikan Star pada repository.
