@@ -1,9 +1,11 @@
 # machine-learning
 # 👟 Hitung Ukuran Sepatu
 
-Aplikasi web sederhana untuk menghitung **perkiraan ukuran sepatu berdasarkan tinggi badan**.
+itung Ukuran Sepatu adalah aplikasi web sederhana untuk memperkirakan ukuran sepatu berdasarkan tinggi badan.
 
-Project ini dibuat menggunakan **HTML, CSS, dan JavaScript (Vanilla JavaScript)** tanpa menggunakan framework atau library tambahan.
+Pengguna cukup memasukkan tinggi badan pada kolom yang tersedia, lalu menekan tombol "Hitung Ukuran Sepatu". Setelah itu, aplikasi akan menghitung dan menampilkan perkiraan ukuran sepatu secara langsung.
+
+Project ini dibuat untuk latihan mempelajari dasar-dasar pembuatan website menggunakan HTML, CSS, dan JavaScript.
 
 ---
 
