@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Hitung Uk.Sepatu</title>
-	</head>
-	<body>
-		<div id="UkSepatu">
-			<label for="inputNumber"
-				>Masukkan Tinggi Badan <i>(harus angka)</i> :</label
-			>
-			<input type="text" id="inputNumber" placeholder="Masukkan tinggi badan"/>
-			<button onclick="result()">Hitung Ukuran Sepatu</button>
-			<div>Ukuran Sepatu : <span id="result">-</span></div>
-		</div>
-		<script src="script.js"></script>
-	</body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitung Ukuran Sepatu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="kalkulator-sepatu">
+    <label for="inputTinggi">Masukkan Tinggi Badan (cm):</label>
+    <input type="number" id="inputTinggi" placeholder="Contoh: 170" min="1" />
+    
+    <button type="button" id="btnHitung">Hitung Ukuran Sepatu</button>
+    
+    <p>Ukuran Sepatu: <strong id="hasil">-</strong></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
