@@ -1,100 +1,114 @@
-# machine-learning
-# 👟 Hitung Ukuran Sepatu
+# 👟 ShoeFit — Kalkulator Ukuran Sepatu
 
-itung Ukuran Sepatu adalah aplikasi web sederhana untuk memperkirakan ukuran sepatu berdasarkan tinggi badan.
+> Aplikasi web modern untuk memperkirakan ukuran sepatu berdasarkan tinggi badan. Dibangun dengan HTML, CSS, dan JavaScript murni tanpa framework tambahan.
 
-Pengguna cukup memasukkan tinggi badan pada kolom yang tersedia, lalu menekan tombol "Hitung Ukuran Sepatu". Setelah itu, aplikasi akan menghitung dan menampilkan perkiraan ukuran sepatu secara langsung.
-
-Project ini dibuat untuk latihan mempelajari dasar-dasar pembuatan website menggunakan HTML, CSS, dan JavaScript.
-
----
-
-## 📋 Daftar Isi
-
-- [Tentang Project](#-tentang-project)
-- [Fitur](#-fitur)
-- [Teknologi](#-teknologi-yang-digunakan)
-- [Struktur Project](#-struktur-project)
-- [Cara Kerja](#-cara-kerja-aplikasi)
-- [Rumus Perhitungan](#-rumus-perhitungan)
-- [Source Code](#-source-code)
-- [Cara Menjalankan](#-cara-menjalankan-project)
-- [Contoh Penggunaan](#-contoh-penggunaan)
-- [Keterbatasan](#️-keterbatasan)
-- [Pengembangan](#-pengembangan-selanjutnya)
-- [Tujuan Pembelajaran](#-tujuan-pembelajaran)
-- [Lisensi](#-lisensi)
-- [Author](#-author)
+![ShoeFit Preview](https://img.shields.io/badge/Status-Active-brightgreen) ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 ---
 
 ## 📌 Tentang Project
 
-**Hitung Ukuran Sepatu** adalah aplikasi web sederhana yang digunakan untuk menghitung perkiraan ukuran sepatu berdasarkan tinggi badan.
+**ShoeFit** adalah aplikasi web kalkulator ukuran sepatu yang didesain dengan tampilan modern dan premium. Pengguna cukup memasukkan tinggi badan, tekan tombol, dan langsung mendapatkan perkiraan ukuran sepatu EU mereka.
 
-Pengguna hanya perlu memasukkan tinggi badan ke dalam kolom input, kemudian menekan tombol **"Hitung Ukuran Sepatu"**. Aplikasi akan memproses input tersebut menggunakan JavaScript dan menampilkan hasil perkiraan ukuran sepatu secara langsung pada halaman.
-
-Project ini dibuat sebagai latihan untuk mempelajari dasar-dasar pengembangan website menggunakan **HTML, CSS, dan JavaScript**.
-
-### Tujuan Project
-
-Project ini bertujuan untuk memahami beberapa konsep dasar dalam web development, antara lain:
-
-- Membuat struktur halaman menggunakan HTML.
-- Mengatur tampilan menggunakan CSS.
-- Mengambil nilai input menggunakan JavaScript.
-- Melakukan manipulasi DOM.
-- Melakukan operasi matematika menggunakan JavaScript.
-- Membuat dan menjalankan function.
-- Menggunakan `Number()` untuk konversi data.
-- Menggunakan `Math.round()` untuk pembulatan angka.
-- Menampilkan hasil perhitungan secara dinamis.
-
-> **Catatan:** Hasil ukuran sepatu yang diberikan oleh aplikasi merupakan hasil perkiraan berdasarkan rumus yang digunakan dalam project ini. Hasil tersebut bukan merupakan standar resmi untuk menentukan ukuran sepatu.
+Project ini menggabungkan estetika **dark glassmorphism**, **animasi sepatu SVG**, dan **micro-interactions** untuk pengalaman pengguna yang menarik — sekaligus menjadi latihan fundamental web development.
 
 ---
 
 ## ✨ Fitur
 
-Aplikasi ini memiliki beberapa fitur utama:
-
-- 👤 Input tinggi badan pengguna.
-- 🔢 Mengubah input menjadi tipe data number.
-- 🧮 Menghitung perkiraan ukuran sepatu.
-- 🔄 Membulatkan hasil perhitungan.
-- 📊 Menampilkan hasil secara langsung pada halaman.
-- 🎨 Tampilan sederhana dan minimalis.
-- 🌙 Menggunakan tema warna gelap.
-- 📱 Menggunakan Flexbox untuk membantu layout.
-- ⚡ Tidak membutuhkan backend.
-- 🗄️ Tidak membutuhkan database.
-- 📦 Tidak membutuhkan library atau framework tambahan.
+| Fitur | Keterangan |
+|---|---|
+| 📏 Input Tinggi Badan | Input angka dengan validasi |
+| 🧮 Kalkulasi Instan | Rumus proporsional tubuh |
+| 👟 Animasi Sepatu SVG | Sepatu melayang dengan animasi float |
+| 🌌 Dark Glassmorphism | Tema gelap modern dengan backdrop-blur |
+| ✨ Floating Particles | Emoji sepatu melayang di background |
+| 📊 Progress Bar Hasil | Visualisasi ukuran dengan bar dinamis |
+| 💫 Micro-Animations | Pop animation pada angka hasil |
+| 📱 Responsive | Tampilan optimal di semua ukuran layar |
+| ⚡ Zero Dependencies | Tidak butuh library/framework apapun |
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Teknologi
 
 | Teknologi | Kegunaan |
 |---|---|
-| HTML5 | Membuat struktur halaman |
-| CSS3 | Mengatur tampilan dan layout |
-| JavaScript | Menjalankan logika aplikasi |
-| DOM Manipulation | Mengambil dan mengubah elemen HTML |
-| Flexbox | Mengatur posisi elemen |
-| CSS Gradient | Membuat background |
-| Math Function | Melakukan pembulatan hasil |
+| HTML5 Semantic | Struktur halaman |
+| CSS3 Custom Properties | Design tokens & tema |
+| CSS Animations & Keyframes | Animasi sepatu, particles, UI |
+| CSS Glassmorphism | `backdrop-filter: blur()` |
+| SVG | Ilustrasi sepatu inline |
+| Vanilla JavaScript | Logika kalkulasi & DOM manipulation |
+| Google Fonts (Outfit) | Tipografi modern |
 
 ---
 
 ## 📁 Struktur Project
 
 ```text
-Hitung-Ukuran-Sepatu/
-│
-├── index.html
-├── script.js
-├── style.css
+ukuran-sepatu/
+├── index.html    ← Struktur & animasi SVG sepatu
+├── style.css     ← Dark glassmorphism theme + animations
+├── script.js     ← Logika kalkulasi ukuran sepatu
 └── README.md
+```
 
+---
 
-⭐ Jika project ini bermanfaat, jangan lupa untuk memberikan Star pada repository.
+## 🧮 Rumus Perhitungan
+
+```
+Ukuran Sepatu (EU) = (Tinggi Badan × 0.24) + 0.42
+```
+
+Hasil dibulatkan menggunakan `Math.round()`.
+
+> **Catatan:** Hasil adalah perkiraan berdasarkan proporsi tubuh rata-rata, bukan standar resmi.
+
+---
+
+## 🚀 Cara Menjalankan
+
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/Salmanyuris/ukuran-sepatu.git
+   ```
+2. Buka folder project:
+   ```bash
+   cd ukuran-sepatu
+   ```
+3. Buka `index.html` di browser (double-click atau Live Server di VS Code)
+
+---
+
+## 📖 Contoh Penggunaan
+
+| Tinggi Badan | Ukuran Sepatu (EU) |
+|---|---|
+| 155 cm | 38 |
+| 165 cm | 40 |
+| 170 cm | 41 |
+| 175 cm | 42 |
+| 180 cm | 43 |
+
+---
+
+## 🎯 Tujuan Pembelajaran
+
+- Manipulasi DOM dengan JavaScript
+- Penerapan CSS modern (Custom Properties, Glassmorphism, Animations)
+- Pembuatan ilustrasi SVG inline
+- Micro-interactions untuk UX yang baik
+- Git workflow & version control
+
+---
+
+## 👤 Author
+
+**Salman Yuris**  
+GitHub: [@Salmanyuris](https://github.com/Salmanyuris)
+
+---
+
+⭐ Jika project ini bermanfaat, jangan lupa berikan **Star** pada repository ini!
