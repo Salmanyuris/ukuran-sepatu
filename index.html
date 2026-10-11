@@ -1,21 +1,146 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hitung Ukuran Sepatu</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main id="kalkulator-sepatu">
-    <label for="inputTinggi">Masukkan Tinggi Badan (cm):</label>
-    <input type="number" id="inputTinggi" placeholder="Contoh: 170" min="1" />
-    
-    <button type="button" id="btnHitung">Hitung Ukuran Sepatu</button>
-    
-    <p>Ukuran Sepatu: <strong id="hasil">-</strong></p>
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitung Ukuran Sepatu | ShoeFit</title>
+    <meta name="description" content="Kalkulator ukuran sepatu berdasarkan tinggi badan. Temukan ukuran sepatu ideal kamu secara instan!" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-  <script src="script.js"></script>
-</body>
+    <!-- Floating background orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Floating shoe particles -->
+    <div class="particles" aria-hidden="true">
+      <span class="particle" style="--delay:0s;--x:10%;--y:20%">👟</span>
+      <span class="particle" style="--delay:1.2s;--x:80%;--y:15%">👠</span>
+      <span class="particle" style="--delay:2.4s;--x:55%;--y:75%">👞</span>
+      <span class="particle" style="--delay:0.8s;--x:25%;--y:80%">👟</span>
+      <span class="particle" style="--delay:3s;--x:90%;--y:60%">👡</span>
+      <span class="particle" style="--delay:1.8s;--x:5%;--y:55%">👞</span>
+    </div>
+
+    <main id="kalkulator-sepatu">
+
+      <!-- Logo / Hero Shoe SVG -->
+      <div class="shoe-hero" aria-label="Animasi Sepatu">
+        <svg class="shoe-svg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Shadow -->
+          <ellipse cx="110" cy="113" rx="80" ry="7" fill="rgba(0,0,0,0.15)" class="shoe-shadow"/>
+          <!-- Sole -->
+          <path d="M30 90 Q20 90 18 100 Q16 110 40 112 Q80 117 140 112 Q175 109 185 100 Q188 92 175 90 Z" fill="#1a1a2e" class="shoe-sole"/>
+          <!-- Upper body -->
+          <path d="M50 90 Q45 70 55 55 Q65 40 90 38 Q110 36 130 42 Q155 50 165 68 Q172 80 175 90 Z" fill="url(#shoeGrad)" class="shoe-upper"/>
+          <!-- Tongue -->
+          <path d="M88 38 Q100 32 112 38 Q115 55 112 75 Q100 78 88 75 Q85 55 88 38 Z" fill="url(#tongueGrad)" class="shoe-tongue"/>
+          <!-- Laces -->
+          <line x1="90" y1="48" x2="110" y2="48" stroke="#fff" stroke-width="2.5" stroke-linecap="round" class="lace"/>
+          <line x1="89" y1="56" x2="111" y2="56" stroke="#fff" stroke-width="2.5" stroke-linecap="round" class="lace" style="--ld:0.1s"/>
+          <line x1="89" y1="64" x2="111" y2="64" stroke="#fff" stroke-width="2.5" stroke-linecap="round" class="lace" style="--ld:0.2s"/>
+          <line x1="90" y1="72" x2="110" y2="72" stroke="#fff" stroke-width="2.5" stroke-linecap="round" class="lace" style="--ld:0.3s"/>
+          <!-- Stripe detail -->
+          <path d="M130 42 Q150 52 162 70 Q155 65 138 55 Q125 48 115 44 Z" fill="rgba(255,255,255,0.15)" class="shoe-stripe"/>
+          <!-- Toe cap -->
+          <path d="M50 90 Q40 82 35 94 Q40 105 60 108 Q50 100 50 90 Z" fill="rgba(0,0,0,0.2)"/>
+          <!-- Heel detail -->
+          <path d="M165 68 Q175 80 175 90 Q172 88 168 80 Z" fill="rgba(0,0,0,0.15)"/>
+          <!-- Midsole stripe -->
+          <path d="M20 102 Q80 97 140 97 Q165 97 183 100 Q165 103 140 103 Q80 108 40 105 Z" fill="#7c3aed"/>
+
+          <!-- Gradient defs -->
+          <defs>
+            <linearGradient id="shoeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#6d28d9"/>
+              <stop offset="100%" style="stop-color:#4f46e5"/>
+            </linearGradient>
+            <linearGradient id="tongueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#7c3aed"/>
+              <stop offset="100%" style="stop-color:#5b21b6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="brand-badge">👟 ShoeFit</div>
+        <h1>Ukuran Sepatu Kamu</h1>
+        <p class="subtitle">Masukkan tinggi badan & temukan ukuran sempurnamu</p>
+      </div>
+
+      <!-- Form -->
+      <div class="input-group">
+        <label for="inputNumber">
+          <span class="label-icon">📏</span>
+          Tinggi Badan
+        </label>
+        <div class="input-wrapper">
+          <input
+            type="number"
+            id="inputNumber"
+            placeholder="Contoh: 170"
+            min="100"
+            max="250"
+            autocomplete="off"
+          />
+          <span class="input-unit">cm</span>
+        </div>
+      </div>
+
+      <button type="button" id="btnHitung" onclick="result()">
+        <span class="btn-icon">🔍</span>
+        Hitung Ukuran Sepatu
+        <span class="btn-shine"></span>
+      </button>
+
+      <!-- Result card -->
+      <div class="result-card" id="resultCard" aria-live="polite">
+        <div class="result-label">Ukuran Sepatu Kamu</div>
+        <div class="result-number">
+          <strong id="result">—</strong>
+          <span class="result-unit">EU</span>
+        </div>
+        <div class="result-bar">
+          <div class="result-bar-fill" id="resultBarFill"></div>
+        </div>
+      </div>
+
+      <!-- Info footer -->
+      <p class="info-note">
+        ℹ️ Hasil merupakan perkiraan berdasarkan rumus proporsional tubuh.
+      </p>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+      // Enhance result display with animations
+      const originalResult = window.result;
+      window.result = function () {
+        originalResult();
+        const val = document.getElementById('result').innerHTML;
+        const card = document.getElementById('resultCard');
+        const bar = document.getElementById('resultBarFill');
+
+        if (val && val !== '—' && !isNaN(Number(val))) {
+          card.classList.add('has-result');
+          // Map shoe size 30–50 to 0–100%
+          const pct = Math.min(100, Math.max(0, ((Number(val) - 30) / 20) * 100));
+          bar.style.width = pct + '%';
+          // Animate number pop
+          const strong = document.getElementById('result');
+          strong.classList.remove('pop');
+          void strong.offsetWidth; // reflow
+          strong.classList.add('pop');
+        }
+      };
+    </script>
+  </body>
 </html>
