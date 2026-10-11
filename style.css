@@ -427,7 +427,29 @@ button:active { transform: translateY(0) scale(0.98); }
   background: none;
 }
 
-/* 13. Responsive */
+/* 13. Input hint & error */
+.input-hint {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+.input-error {
+  font-size: 0.78rem;
+  color: #f87171;
+  min-height: 1.2em;
+  display: block;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+input[type="number"].input-invalid {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.06);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* 14. Responsive */
 @media (max-width: 440px) {
   #kalkulator-sepatu { padding: 28px 20px 24px; margin: 12px; }
   .card-header h1 { font-size: 1.35rem; }

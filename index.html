@@ -92,6 +92,8 @@
           />
           <span class="input-unit">cm</span>
         </div>
+        <span class="input-hint">Rentang: 100 – 250 cm</span>
+        <span class="input-error" id="inputError" role="alert"></span>
       </div>
 
       <button type="button" id="btnHitung" onclick="result()">
@@ -121,9 +123,30 @@
 
     <script src="script.js"></script>
     <script>
-      // Enhance result display with animations
+      // Enhance result display with animations + input validation
       const originalResult = window.result;
+
+      function validateInput() {
+        const input = document.getElementById('inputNumber');
+        const errorEl = document.getElementById('inputError');
+        const val = Number(input.value);
+        if (!input.value) {
+          errorEl.textContent = '⚠️ Mohon masukkan tinggi badan kamu.';
+          input.classList.add('input-invalid');
+          return false;
+        }
+        if (val < 100 || val > 250) {
+          errorEl.textContent = '⚠️ Tinggi badan harus antara 100 – 250 cm.';
+          input.classList.add('input-invalid');
+          return false;
+        }
+        errorEl.textContent = '';
+        input.classList.remove('input-invalid');
+        return true;
+      }
+
       window.result = function () {
+        if (!validateInput()) return;
         originalResult();
         const val = document.getElementById('result').innerHTML;
         const card = document.getElementById('resultCard');
@@ -141,6 +164,17 @@
           strong.classList.add('pop');
         }
       };
+
+      // Enter key support
+      document.getElementById('inputNumber').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') window.result();
+      });
+
+      // Clear error on typing
+      document.getElementById('inputNumber').addEventListener('input', function () {
+        document.getElementById('inputError').textContent = '';
+        this.classList.remove('input-invalid');
+      });
     </script>
   </body>
 </html>
