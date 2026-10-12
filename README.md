@@ -109,19 +109,47 @@ Hasil dibulatkan menggunakan `Math.round()`.
 
 ## 🎯 Tujuan Pembelajaran
 
-- Manipulasi DOM dengan JavaScript
-- Penerapan CSS modern (Custom Properties, Glassmorphism, Animations)
-- Pembuatan ilustrasi SVG inline
-- Micro-interactions untuk UX yang baik
-- Git workflow & version control
+Project ini dibuat sebagai latihan untuk memahami:
+
+- ✅ **Manipulasi DOM** dengan JavaScript murni
+- ✅ **CSS Modern** — Custom Properties, Glassmorphism, Keyframe Animations
+- ✅ **Validasi Input** — pengecekan nilai sebelum kalkulasi
+- ✅ **SVG Inline** — membuat ilustrasi vektor langsung di HTML
+- ✅ **Micro-interactions** — UX yang hidup & responsif
+- ✅ **Responsive Design** — tampilan lintas perangkat
+- ✅ **Git Workflow** — version control & push ke GitHub
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat terbuka! Jika ingin berkontribusi:
+
+1. **Fork** repository ini
+2. Buat **branch** baru: `git checkout -b fitur/nama-fitur`
+3. **Commit** perubahan: `git commit -m "feat: tambah fitur X"`
+4. **Push** ke branch: `git push origin fitur/nama-fitur`
+5. Buat **Pull Request**
+
+---
+
+## 📄 Lisensi
+
+Project ini dilisensikan di bawah **MIT License** — bebas digunakan, dimodifikasi, dan didistribusikan.
 
 ---
 
 ## 👤 Author
 
-**Salman Yuris**  
-GitHub: [@Salmanyuris](https://github.com/Salmanyuris)
+**Salman Yuris**
+- GitHub: [@Salmanyuris](https://github.com/Salmanyuris)
 
 ---
 
-⭐ Jika project ini bermanfaat, jangan lupa berikan **Star** pada repository ini!
+<div align="center">
+
+⭐ **Jika project ini bermanfaat, berikan Star pada repository ini!** ⭐
+
+*Dibuat dengan ❤️ menggunakan HTML, CSS & JavaScript murni*
+
+</div>
