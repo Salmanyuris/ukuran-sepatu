@@ -35,17 +35,17 @@ Project ini menggabungkan estetika **dark glassmorphism**, **animasi sepatu SVG 
 
 ---
 
-## 🛠️ Teknologi
+## 🛠️ Teknologi yang Digunakan
 
-| Teknologi | Kegunaan |
-|---|---|
-| HTML5 Semantic | Struktur halaman |
-| CSS3 Custom Properties | Design tokens & tema |
-| CSS Animations & Keyframes | Animasi sepatu, particles, UI |
-| CSS Glassmorphism | `backdrop-filter: blur()` |
-| SVG | Ilustrasi sepatu inline |
-| Vanilla JavaScript | Logika kalkulasi & DOM manipulation |
-| Google Fonts (Outfit) | Tipografi modern |
+| Teknologi | Versi / Detail | Kegunaan |
+|---|---|---|
+| HTML5 Semantic | Latest | Struktur & markup halaman |
+| CSS3 Custom Properties | Latest | Design tokens & sistem tema |
+| CSS Animations & Keyframes | Latest | Animasi sepatu, particles, transisi UI |
+| CSS Glassmorphism | `backdrop-filter: blur()` | Efek kaca transparan modern |
+| SVG Inline | Handcrafted | Ilustrasi sepatu animatif |
+| Vanilla JavaScript | ES6+ | Logika kalkulasi & manipulasi DOM |
+| Google Fonts — Outfit | wght 300–900 | Tipografi modern & bersih |
 
 ---
 
@@ -53,10 +53,10 @@ Project ini menggabungkan estetika **dark glassmorphism**, **animasi sepatu SVG 
 
 ```text
 ukuran-sepatu/
-├── index.html    ← Struktur & animasi SVG sepatu
-├── style.css     ← Dark glassmorphism theme + animations
-├── script.js     ← Logika kalkulasi ukuran sepatu
-└── README.md
+├── index.html    ← Struktur halaman, SVG sepatu & script validasi
+├── style.css     ← Dark glassmorphism theme, animasi & responsive
+├── script.js     ← Fungsi kalkulasi ukuran sepatu (core logic)
+└── README.md     ← Dokumentasi project
 ```
 
 ---
