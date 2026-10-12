@@ -14,23 +14,24 @@
 
 **ShoeFit** adalah aplikasi web kalkulator ukuran sepatu yang didesain dengan tampilan modern dan premium. Pengguna cukup memasukkan tinggi badan, tekan tombol, dan langsung mendapatkan perkiraan ukuran sepatu EU mereka.
 
-Project ini menggabungkan estetika **dark glassmorphism**, **animasi sepatu SVG**, dan **micro-interactions** untuk pengalaman pengguna yang menarik — sekaligus menjadi latihan fundamental web development.
+Project ini menggabungkan estetika **dark glassmorphism**, **animasi sepatu SVG inline**, dan **micro-interactions** untuk pengalaman pengguna yang menarik — sekaligus menjadi latihan fundamental web development.
 
 ---
 
-## ✨ Fitur
+## ✨ Fitur Unggulan
 
 | Fitur | Keterangan |
 |---|---|
-| 📏 Input Tinggi Badan | Input angka dengan validasi |
-| 🧮 Kalkulasi Instan | Rumus proporsional tubuh |
-| 👟 Animasi Sepatu SVG | Sepatu melayang dengan animasi float |
-| 🌌 Dark Glassmorphism | Tema gelap modern dengan backdrop-blur |
-| ✨ Floating Particles | Emoji sepatu melayang di background |
-| 📊 Progress Bar Hasil | Visualisasi ukuran dengan bar dinamis |
-| 💫 Micro-Animations | Pop animation pada angka hasil |
-| 📱 Responsive | Tampilan optimal di semua ukuran layar |
-| ⚡ Zero Dependencies | Tidak butuh library/framework apapun |
+| 📏 Input Tinggi Badan | Input angka dengan validasi real-time |
+| 🧮 Kalkulasi Instan | Rumus proporsional tubuh, hasil langsung tampil |
+| 👟 Animasi Sepatu SVG | Sepatu melayang dengan animasi float & gradient |
+| 🌌 Dark Glassmorphism | Tema gelap modern dengan `backdrop-filter: blur()` |
+| ✨ Floating Particles | Emoji sepatu melayang animatif di background |
+| 📊 Progress Bar Dinamis | Visualisasi ukuran dengan bar animasi |
+| 💫 Micro-Animations | Pop animation pada angka hasil kalkulasi |
+| ⌨️ Keyboard Support | Tekan `Enter` untuk langsung menghitung |
+| 📱 Responsive Design | Tampilan optimal di semua ukuran layar |
+| ⚡ Zero Dependencies | Tidak butuh library atau framework apapun |
 
 ---
 
