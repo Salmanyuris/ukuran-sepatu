@@ -69,33 +69,41 @@ Ukuran Sepatu (EU) = (Tinggi Badan × 0.24) + 0.42
 
 Hasil dibulatkan menggunakan `Math.round()`.
 
-> **Catatan:** Hasil adalah perkiraan berdasarkan proporsi tubuh rata-rata, bukan standar resmi.
+> **⚠️ Catatan:** Hasil merupakan **perkiraan** berdasarkan proporsi tubuh rata-rata manusia, bukan standar resmi dari produsen sepatu.
 
 ---
 
 ## 🚀 Cara Menjalankan
 
-1. Clone repository ini:
+### Cara Cepat (tanpa instalasi)
+1. **Clone** repository ini:
    ```bash
    git clone https://github.com/Salmanyuris/ukuran-sepatu.git
    ```
-2. Buka folder project:
+2. **Masuk** ke folder project:
    ```bash
    cd ukuran-sepatu
    ```
-3. Buka `index.html` di browser (double-click atau Live Server di VS Code)
+3. **Buka** `index.html` langsung di browser *(double-click)*, atau gunakan **Live Server** di VS Code untuk pengalaman terbaik.
+
+### Menggunakan Live Server (VS Code)
+1. Install ekstensi **Live Server** di VS Code
+2. Klik kanan `index.html` → **"Open with Live Server"**
+3. Browser akan otomatis terbuka di `http://127.0.0.1:5500`
 
 ---
 
-## 📖 Contoh Penggunaan
+## 📖 Contoh Hasil Perhitungan
 
-| Tinggi Badan | Ukuran Sepatu (EU) |
-|---|---|
-| 155 cm | 38 |
-| 165 cm | 40 |
-| 170 cm | 41 |
-| 175 cm | 42 |
-| 180 cm | 43 |
+| Tinggi Badan | Ukuran Sepatu (EU) | Keterangan |
+|:---:|:---:|:---|
+| 150 cm | 36 | Ukuran kecil |
+| 155 cm | 38 | Rata-rata perempuan |
+| 165 cm | 40 | Transisi perempuan/laki-laki |
+| 170 cm | 41 | Rata-rata laki-laki Indonesia |
+| 175 cm | 42 | Di atas rata-rata |
+| 180 cm | 43 | Laki-laki tinggi |
+| 190 cm | 46 | Ukuran besar |
 
 ---
 
