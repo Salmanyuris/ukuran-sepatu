@@ -69,7 +69,7 @@ Ukuran Sepatu (EU) = (Tinggi Badan × 0.24) + 0.42
 
 Hasil dibulatkan menggunakan `Math.round()`.
 
-> **⚠️ Catatan:** Hasil merupakan **perkiraan** berdasarkan proporsi tubuh rata-rata manusia, bukan standar resmi dari produsen sepatu.
+> **⚠️ Catatan:** Hasil merupakan hanya sebagai**perkiraan** berdasarkan proporsi tubuh rata-rata manusia, bukan standar resmi dari produsen sepatu.
 
 ---
 
