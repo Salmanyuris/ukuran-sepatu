@@ -1,4 +1,4 @@
-
+#javascript-logic
 function result() {
     let input = document.getElementById("inputNumber").value;
     let output = document.getElementById('result');
