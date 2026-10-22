@@ -31,7 +31,7 @@
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 3. Body & background layers */
+/* 3. body dan background layer */
 body {
   font-family: 'Outfit', sans-serif;
   background: var(--bg);
